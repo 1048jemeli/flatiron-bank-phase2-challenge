@@ -35,8 +35,10 @@ function Form({ transactions, setTransactions }) {
     }
   };
 
+  
+  
   return (
-    <div className="row border">
+    <div className="row">
       <div className="col-3">
         <input
           type="date"
@@ -72,7 +74,7 @@ function Form({ transactions, setTransactions }) {
           onChange={handleInputChange}
         />
       </div>{""}
-      <div className="col-12">
+      <div className="col12">
         <button onClick={handleAddTransaction}>Add Transaction</button>
       </div>
     </div>

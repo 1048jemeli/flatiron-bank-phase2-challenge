@@ -16,7 +16,7 @@ const Search = ({ setTransactions, list }) => {
           onChange={handleChange}
           className="form-control"
           type="text"
-          placeholder="Search For Transactions"
+          placeholder="Search Transactions"
         />
       </div>
     );

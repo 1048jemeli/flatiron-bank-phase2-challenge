@@ -1,0 +1,18 @@
+.header{
+    background-color: rgb(46 16 101);
+    text-align: center;
+}
+table, th, td {
+    border: 0.1px solid grey;
+    width: 1900px
+  }
+.h1{
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: rgb(245 245 244);
+  }
+  * {
+    box-sizing: border-box;
+    text-align: center;
+  } 

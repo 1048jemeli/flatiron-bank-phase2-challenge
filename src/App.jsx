@@ -11,19 +11,19 @@ function App() {
       Date: "2024-12-01",
       Description: "Heater",
       Category: "Electronics",
-      Amount: "Ksh.50",
+      Amount: "50",
     },
     {
       Date: "2024-12-02",
       Description: "Summer Dress",
       Category: "Fashion",
-      Amount: "Ksh.150",
+      Amount: "150",
     },
     {
       Date: "2024-12-03",
       Description: "Chicken",
       Category: "Food",
-      Amount: "Ksh.100",
+      Amount: "100",
     },
     {
       Date: "2019-12-04",
