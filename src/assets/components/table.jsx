@@ -1,16 +1,21 @@
+import React from "react";
+function TableRow({ transaction }) {
+  return (
+    <tr>
+      <td>{transaction.Date}</td>
+      <td>{transaction.Description}</td>
+      <td>{transaction.Category}</td>
+      <td>{transaction.Amount}</td>
+    </tr>
+  );
+}
+
 function Table({ transactions }) {
-    const data = transactions.map((one, i) => {
-      return (
-        <tr key={i+ 1}>
-          <td>{one.Date}</td>
-          <td>{one.Description}</td>
-          <td>{one.Category}</td>
-          <td>{one.Amount}</td>
-        </tr>
-      );
-    });
-  
-    return (<>{data}</>);
-  }
-  
-  export default Table;
+  const rows = transactions.map((transaction, index) => (
+    <TableRow key={index} transaction={transaction} />
+  ));
+
+  return <tbody>{rows}</tbody>;
+}
+
+export default Table;

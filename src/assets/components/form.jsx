@@ -1,5 +1,52 @@
 import React, { useState } from "react";
 
+function DateInput({ value, onChange }) {
+  return (
+    <div className="col-3">
+      <input type="date" name="Date" value={value} onChange={onChange} />
+    </div>
+  );
+}
+function DescriptionInput({ value, onChange }) {
+  return (
+    <div className="col-3">
+      <input
+        type="text"
+        name="Description"
+        placeholder="Description"
+        value={value}
+        onChange={onChange}
+      />
+    </div>
+  );
+}
+function CategoryInput({ value, onChange }) {
+  return (
+    <div className="col-3">
+      <input
+        type="text"
+        name="Category"
+        placeholder="Category"
+        value={value}
+        onChange={onChange}
+      />
+    </div>
+  );
+}
+function AmountInput({ value, onChange }) {
+  return (
+    <div className="col-3">
+      <input
+        type="text"
+        name="Amount"
+        placeholder="Amount"
+        value={value}
+        onChange={onChange}
+      />
+    </div>
+  );
+}
+
 function Form({ transactions, setTransactions }) {
   const [newTransaction, setNewTransaction] = useState({
     Date: "",
@@ -35,46 +82,22 @@ function Form({ transactions, setTransactions }) {
     }
   };
 
-  
-  
   return (
     <div className="row">
-      <div className="col-3">
-        <input
-          type="date"
-          name="Date"
-          value={newTransaction.Date}
-          onChange={handleInputChange}
-        />
-      </div>{" "}
-      <div className="col-3">
-        <input
-          type="text"
-          name="Description"
-          placeholder="Description"
-          value={newTransaction.Description}
-          onChange={handleInputChange}
-        />
-      </div>{" "}
-      <div className="col-3">
-        <input
-          type="text"
-          name="Category"
-          placeholder="Category"
-          value={newTransaction.Category}
-          onChange={handleInputChange}
-        />
-      </div>{" "}
-      <div className="col-3">
-        <input
-          type="text"
-          name="Amount"
-          placeholder="Amount"
-          value={newTransaction.Amount}
-          onChange={handleInputChange}
-        />
-      </div>{""}
-      <div className="col12">
+      <DateInput value={newTransaction.Date} onChange={handleInputChange} />
+      <DescriptionInput
+        value={newTransaction.Description}
+        onChange={handleInputChange}
+      />
+      <CategoryInput
+        value={newTransaction.Category}
+        onChange={handleInputChange}
+      />
+      <AmountInput
+        value={newTransaction.Amount}
+        onChange={handleInputChange}
+      />
+      <div className="col-12">
         <button onClick={handleAddTransaction}>Add Transaction</button>
       </div>
     </div>
